@@ -1,0 +1,36 @@
+.button{
+    width: 80px;
+    height: 25px;
+    border: none;
+    &__header{
+        background-color: transparent;
+        border: 1px solid $white;
+        border-radius: 4px;
+        color: $white;
+        font-size: 1.2rem;
+        font-weight: 400;
+        transition: .3s all;
+        &:hover{
+            background-color: $main-color; 
+        }
+    }
+    &__promo{
+        width: 150px;
+        height: 50px;
+        font-weight: 600;
+        font-size: 1.5rem;
+        border-radius: 4px;
+        box-shadow: 1px 2px 8px #11bda8;
+        &_buy{
+            text-transform: uppercase;
+            background-color: $main-color;
+            color: $white;
+            margin-right: 27px;
+        }
+        &_try{
+            text-transform: uppercase;
+            color: $main-color;
+            background-color: $white;
+        }
+    }
+}
