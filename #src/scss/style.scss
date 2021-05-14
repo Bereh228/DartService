@@ -17,6 +17,7 @@
 @import 'promo';
 @import 'header';
 @import 'services';
+@import 'statistic';
 
 html{
     font-size: 62.5%;
@@ -24,6 +25,7 @@ html{
 
 body{
     font-family: Raleway, sans-serif;
+    overflow-x: hidden;
 }
 
 .container{
