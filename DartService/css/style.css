@@ -372,6 +372,66 @@ template {
   font-style: normal;
 }
 
+.button {
+  width: 80px;
+  height: 25px;
+  border: none;
+}
+
+.button__header {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.button__header:hover {
+  background-color: #061e37;
+}
+
+.button__promo {
+  width: 150px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 2px 8px #11bda8;
+          box-shadow: 1px 2px 8px #11bda8;
+}
+
+.button__promo_buy {
+  text-transform: uppercase;
+  background-color: #061e37;
+  color: #fff;
+  margin-right: 27px;
+}
+
+.button__promo_try {
+  text-transform: uppercase;
+  color: #061e37;
+  background-color: #fff;
+}
+
+.button__services {
+  display: block;
+  margin: 0 auto;
+  background-color: #1de9b6;
+  width: 150px;
+  height: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 2px 4px #67dacc;
+          box-shadow: 1px 2px 4px #67dacc;
+}
+
 .promo {
   min-height: 750px;
   background: url("../img/main_bg.png") center center/cover no-repeat;
@@ -537,49 +597,55 @@ template {
   color: #061e37;
 }
 
-.button {
-  width: 80px;
-  height: 25px;
-  border: none;
+.services {
+  min-height: 800px;
+  padding: 95px 0;
 }
 
-.button__header {
-  background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 400;
-  -webkit-transition: .3s all;
-  -o-transition: .3s all;
-  transition: .3s all;
-}
-
-.button__header:hover {
-  background-color: #061e37;
-}
-
-.button__promo {
-  width: 150px;
-  height: 50px;
+.services__header {
+  color: #b0bec5;
   font-weight: 600;
-  font-size: 1.5rem;
-  border-radius: 4px;
-  -webkit-box-shadow: 1px 2px 8px #11bda8;
-          box-shadow: 1px 2px 8px #11bda8;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 13px;
 }
 
-.button__promo_buy {
-  text-transform: uppercase;
-  background-color: #061e37;
-  color: #fff;
-  margin-right: 27px;
+.services__wrapper {
+  margin: 70px 0px 65px;
+  display: grid;
+  grid-template: minmax(220px, 1fr)/repeat(3, 350px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.button__promo_try {
-  text-transform: uppercase;
+.services__icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 25px auto;
+}
+
+.services__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.services__title {
+  font-size: 2rem;
   color: #061e37;
-  background-color: #fff;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.services__descr {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #78909c;
+  font-weight: 400;
 }
 
 html {
@@ -592,6 +658,23 @@ body {
 
 .container {
   width: 1440px;
+}
+
+.title {
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #061e37;
+  margin-bottom: 10px;
+}
+
+.subheaderR {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #b0bec5;
+  width: 560px;
+  margin: 0 auto;
 }
 @supports (-webkit-appearance:none){
 .promo{background:url("../img/main_bg.webp") center center/cover no-repeat}

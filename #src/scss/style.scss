@@ -8,13 +8,15 @@
     font-style: #{$style};
     }
 }
-@import 'reboot.min.scss';
-
 @import 'vars';
+
+@import 'reboot.min.scss';
 @import 'fonts';
+@import 'button';
+
 @import 'promo';
 @import 'header';
-@import 'button';
+@import 'services';
 
 html{
     font-size: 62.5%;
@@ -26,5 +28,21 @@ body{
 
 .container{
     width: 1440px;
+}
+
+.title{
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: $main-color;
+    margin-bottom: 10px;
+}
+.subheaderR{
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: $second;
+    width: 560px;
+    margin: 0 auto;
 }
 
