@@ -432,6 +432,17 @@ template {
           box-shadow: 1px 2px 4px #67dacc;
 }
 
+.button__about {
+  width: 150px;
+  height: 50px;
+  color: white;
+  background-color: #061e37;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
 .promo {
   min-height: 750px;
   background: url("../img/main_bg.png") center center/cover no-repeat;
@@ -836,6 +847,56 @@ i {
   -webkit-transform: rotate(45deg);
 }
 
+.about {
+  min-height: 565px;
+  background: url("../img/other_bg.png") center center/cover no-repeat;
+  padding: 84px 0px;
+}
+
+.about__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__text {
+  color: white;
+  width: 550px;
+}
+
+.about__header {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.about__descr {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+
+.about__carousel-wrapper {
+  width: 750px;
+}
+
+.about__carousel-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -868,4 +929,5 @@ body {
 @supports (-webkit-appearance:none){
 .promo{background:url("../img/main_bg.webp") center center/cover no-repeat}
 .promo__movie{background:url("../img/video_bg.webp") center center/cover no-repeat}
+.about{background:url("../img/other_bg.webp") center center/cover no-repeat}
 }

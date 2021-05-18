@@ -1,0 +1,34 @@
+.about{
+    min-height: 565px;
+    background: url('../img/other_bg.png') center (center/cover) no-repeat;
+    padding: 84px 0px;    
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text{
+        color: white;
+        width: 550px;
+    }
+    &__header{
+        font-size: 4.5rem;
+        line-height: 1.1;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    &__descr{
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-bottom: 60px;
+    }
+
+    &__carousel-wrapper{
+        width: 750px;
+    }
+    &__carousel-data{
+        display: flex;
+        align-items: center;
+    }
+}
