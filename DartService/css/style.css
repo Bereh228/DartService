@@ -739,6 +739,7 @@ template {
           box-shadow: 2px 3px 33px -2px rgba(4, 4, 4, 0.2);
   margin-bottom: 20px;
   border-radius: 8px;
+  cursor: pointer;
   overflow: hidden;
   height: 50px;
   -webkit-transition: 0.5s all !important;
@@ -764,7 +765,6 @@ template {
   margin-bottom: 10px;
   height: 50px;
   padding: 15px;
-  cursor: pointer;
 }
 
 .favor__logo {
