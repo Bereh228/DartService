@@ -1,0 +1,87 @@
+.favor{
+    min-height: 870px;
+    padding: 100px 0px 88px 0px;
+    &__element{
+        width: 800px;
+        margin: 40px auto 0px;
+        &-item{
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 3px 33px -2px rgba(4, 4, 4, 0.2);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 50px;
+            transition: .5s all!important;
+            &_active{
+                transition: .5s all!important;
+                min-height: 300px;
+            }
+        }
+    }
+    &__top{
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 50px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    &__logo{
+        width: 20px;
+        height: 14px;
+        margin-right: 25px;
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__text{
+        font-size: 1.5rem;
+        color: $main-color;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        min-height: 165px;
+        align-items: center;
+        padding: 0 15px 15px;
+        &-img{
+            width: 250px;
+            height: 150px;
+            margin-right: 25px;
+            img{
+                display: block;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-descr{
+            color: $main-color;
+            font-weight: 400;
+            font-size: 1.5rem;
+
+        }
+    }
+}
+
+i {
+    position: absolute;
+    right: 15px;
+
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
