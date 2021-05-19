@@ -762,7 +762,7 @@ template {
   -webkit-transition: 0.5s all !important;
   -o-transition: 0.5s all !important;
   transition: 0.5s all !important;
-  min-height: 300px;
+  min-height: 250px;
 }
 
 .favor__top {
@@ -889,12 +889,218 @@ i {
 }
 
 .about__carousel-data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 60px;
+}
+
+.about__carousel-data__text {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.about__carousel-data__logo {
+  width: 75px;
+  height: 75px;
+  margin-right: 40px;
+}
+
+.about__carousel-data__logo img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about__carousel-data__header {
+  font-weight: 700;
+  color: #061e37;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.about__carousel-data__descr {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #78909c;
+  font-style: italic;
+}
+
+.about .slick-prev {
+  font-size: 0;
+  border: none;
+  background: url("../img/arrowUp.png") center center/cover no-repeat;
+  width: 25px;
+  height: 15px;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  z-index: 5;
+}
+
+.about .slick-next {
+  font-size: 0;
+  border: none;
+  background: url("../img/arrowDown.png") center center/cover no-repeat;
+  width: 25px;
+  height: 15px;
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  z-index: 5;
+}
+
+.about .slick-list {
+  position: relative;
+}
+
+.team {
+  min-height: 750px;
+  padding: 100px 0 60px;
+}
+
+.team__descr {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 400;
+  color: #b0bec5;
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+}
+
+.team__carousel {
+  margin: 0 auto;
+  width: 900px;
+  max-height: 450px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.team__carousel-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: 5px;
+}
+
+.team__carousel-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 30px;
+}
+
+.team__carousel-img img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.team__carousel-header {
+  font-size: 1.8rem;
+  color: #061e37;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.team__carousel-descr {
+  font-weight: 400;
+  color: #90a4ae;
+  font-size: 1.5rem;
+}
+
+.team .slick-current {
+  width: 350px !important;
+  -webkit-filter: blur(0) !important;
+          filter: blur(0) !important;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+}
+
+.team .slick-track .slick-active {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+.team .slick-dots {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: -15px;
+  left: 45%;
+  padding: 0;
+}
+
+.team .slick-track {
+  max-height: 450px;
+}
+
+.team .slick-list {
+  max-height: 450px;
+}
+
+.team li[role=presentation] {
+  font-size: 0;
+}
+
+.team li[role=presentation] button {
+  background: transparent;
+  border: 1px solid black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.team li.slick-active button {
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+  background-color: #061e37;
+}
+
+.team__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team__link {
+  width: 15px;
+  height: 15px;
+  margin-right: 30px;
+}
+
+.team__link img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 html {
@@ -930,4 +1136,6 @@ body {
 .promo{background:url("../img/main_bg.webp") center center/cover no-repeat}
 .promo__movie{background:url("../img/video_bg.webp") center center/cover no-repeat}
 .about{background:url("../img/other_bg.webp") center center/cover no-repeat}
+.about .slick-prev{background:url("../img/arrowUp.webp") center center/cover no-repeat}
+.about .slick-next{background:url("../img/arrowDown.webp") center center/cover no-repeat}
 }

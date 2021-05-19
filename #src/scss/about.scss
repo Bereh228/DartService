@@ -28,7 +28,63 @@
         width: 750px;
     }
     &__carousel-data{
-        display: flex;
+        display: flex!important;
         align-items: center;
+        margin-bottom: 60px;
+        &__text{
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 30px;
+        }
+        &__logo{
+            width: 75px;
+            height: 75px;
+            margin-right: 40px;
+            img{
+                display: block;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__header{
+            font-weight: 700;
+            color: $main-color;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        &__descr{
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: #78909c;
+            font-style: italic;
+        }
+    }
+    
+    .slick-prev{
+        font-size: 0;
+        border: none;
+        background: url('../img/arrowUp.png') center (center/cover) no-repeat;
+        width: 25px;
+        height: 15px;
+
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        z-index: 5;
+    }
+    .slick-next{
+        font-size: 0;
+        border: none;
+        background: url('../img/arrowDown.png') center (center/cover) no-repeat;
+        width: 25px;
+        height: 15px;
+
+        position: absolute;
+        bottom: 18px;
+        left: 50%;
+        z-index: 5;
+    }
+    .slick-list{
+        position: relative;
     }
 }
