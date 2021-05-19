@@ -1,0 +1,124 @@
+.modal{
+    
+    position: fixed;
+    top: 0;
+
+
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: .4);
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+    }
+    &__login{
+        min-height: 150px;
+        width: 300px;
+        border: 1px solid $modal;
+        background-color: rgba($color: #000, $alpha: .7);
+        &-header{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            &__log,
+            &__reg{
+                width: 50%;
+                text-transform: uppercase;
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 400;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+            }
+            &__log{
+                font-weight: 600;
+                font-size: 1.8rem;
+                background-color: #1de9b6;
+            }
+            &__reg{
+                cursor: pointer;
+                background-color: rgb(124, 124, 124);
+            }
+
+        }
+        &-content{
+            .wrapper{
+                display: flex;
+                flex-direction: column;
+                input{
+                    margin: 10px auto;
+                    width: 70%;
+                    height: 35px;
+                    outline: none;
+                    padding: 10px;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: rgb(124, 124, 124);
+                    border: 1px solid #1de9b6;
+                    &:focus{
+                        border: 2px solid #1de9b6;
+                    }
+                }
+            }
+        }
+    }
+    &__reg{
+        display: none;
+
+        min-height: 150px;
+        width: 300px;
+        border: 1px solid $modal;
+        background-color: rgba($color: #000, $alpha: .7);
+        &-header{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            &__log,
+            &__reg{
+                width: 50%;
+                text-transform: uppercase;
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 400;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+            }
+            &__log{
+                background-color: rgb(124, 124, 124);
+                font-size: 1.5rem;
+                font-weight: 400;
+                cursor: pointer;
+            }
+            &__reg{
+                font-weight: 600;
+                font-size: 1.8rem;
+                background-color: $modal;
+            }
+
+        }
+        &-content{
+            .wrapper{
+                display: flex;
+                flex-direction: column;
+                input{
+                    margin: 10px auto;
+                    width: 70%;
+                    height: 35px;
+                    outline: none;
+                    padding: 10px;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: rgb(124, 124, 124);
+                    border: 1px solid #1de9b6;
+                    &:focus{
+                        border: 2px solid #1de9b6;
+                    }
+                }
+            }
+        }
+    }
+}

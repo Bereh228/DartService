@@ -379,6 +379,7 @@ template {
 }
 
 .button__header {
+  width: 110px;
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 4px;
@@ -454,10 +455,27 @@ template {
   font-weight: 600;
 }
 
+.button__modal {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 3px;
+  width: 100px;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: #1de9b6;
+  color: white;
+  margin: 0 auto 10px;
+}
+
 .promo {
   min-height: 750px;
   background: url("../img/main_bg.png") center center/cover no-repeat;
   padding: 45px 0 0 0;
+}
+
+.promo__youtube {
+  display: none;
 }
 
 .promo__wrapper {
@@ -512,6 +530,15 @@ template {
   top: calc(50% - 32.5px);
   left: calc(50% - 35px);
   cursor: pointer;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.promo__movie-button:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .promo__movie-button img {
@@ -1330,6 +1357,162 @@ i {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__login {
+  min-height: 150px;
+  width: 300px;
+  border: 1px solid #1de9b6;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__login-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.modal__login-header__log,
+.modal__login-header__reg {
+  width: 50%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.modal__login-header__log {
+  font-weight: 600;
+  font-size: 1.8rem;
+  background-color: #1de9b6;
+}
+
+.modal__login-header__reg {
+  cursor: pointer;
+  background-color: #7c7c7c;
+}
+
+.modal__login-content .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal__login-content .wrapper input {
+  margin: 10px auto;
+  width: 70%;
+  height: 35px;
+  outline: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #7c7c7c;
+  border: 1px solid #1de9b6;
+}
+
+.modal__login-content .wrapper input:focus {
+  border: 2px solid #1de9b6;
+}
+
+.modal__reg {
+  display: none;
+  min-height: 150px;
+  width: 300px;
+  border: 1px solid #1de9b6;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__reg-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.modal__reg-header__log,
+.modal__reg-header__reg {
+  width: 50%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.modal__reg-header__log {
+  background-color: #7c7c7c;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.modal__reg-header__reg {
+  font-weight: 600;
+  font-size: 1.8rem;
+  background-color: #1de9b6;
+}
+
+.modal__reg-content .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal__reg-content .wrapper input {
+  margin: 10px auto;
+  width: 70%;
+  height: 35px;
+  outline: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #7c7c7c;
+  border: 1px solid #1de9b6;
+}
+
+.modal__reg-content .wrapper input:focus {
+  border: 2px solid #1de9b6;
 }
 
 html {

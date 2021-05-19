@@ -2,6 +2,11 @@
     min-height: 750px;
     background: url('../img/main_bg.png') center (center/cover) no-repeat;
     padding: 45px 0 0 0;
+
+    &__youtube{
+        display: none;
+    }
+
     &__wrapper{
         display: flex;
         justify-content: space-between;
@@ -38,6 +43,10 @@
             top: calc(50% - 32.5px);
             left: calc(50% - 35px);
             cursor: pointer;
+            transition: .3s all;
+            &:hover{
+                transform: scale(1.1);
+            }
             img{
                 display: block;
                 width: 100%;

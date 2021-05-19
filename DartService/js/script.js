@@ -48,6 +48,12 @@ for(let item of dropDownMenuItems){
     
   });
 
+  $('.promo__movie-button').click(function(){
+      $(this).fadeOut();
+      $('.promo__movie-descr').fadeOut();
+      $('.promo__youtube').fadeIn();
+  })
+
   $('.team__carousel').slick({
     centerMode: true,
     centerPadding: '10px',
@@ -77,6 +83,28 @@ for(let item of dropDownMenuItems){
     ]
   });
 
+
+function fadeInLogin(){
+    $('#modal__login').fadeIn('slow');
+}
+
+function fadeInReg(){
+    $('#modal__reg').fadeIn('slow');
+}
+
+  $('.modal__login-header__reg').click(function(){
+    $('#modal__login').fadeOut('fast');
+    setTimeout(fadeInReg,700);
+  });
+
+$('.modal__reg-header__log').click(function(){
+    $('#modal__reg').fadeOut('fast');
+    setTimeout(fadeInLogin, 700);
+});
+
+$('#headerSiglog').click(function(){
+    $('#modal, #modal__login').fadeIn('slow');
+});
 
 // let selectedTd;
 
