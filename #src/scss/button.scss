@@ -32,6 +32,14 @@
             text-transform: uppercase;
             color: $main-color;
             background-color: $white;
+            margin-right: 27px;
+        }
+        &_video{
+            display: none;
+            text-transform: uppercase;
+            background-color: $white;
+            color: $main-color;
+            margin-right: 27px;
         }
     }
     &__services{

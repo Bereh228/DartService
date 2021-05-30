@@ -3,6 +3,7 @@
     &__wrapper{
         display: grid;
         grid-template: minmax(150px, 1fr) / repeat(4, 400px);
+        justify-content: center;
     }
     &__item:nth-child(1){
         background-color: #80d8ff;

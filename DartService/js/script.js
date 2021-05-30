@@ -42,9 +42,20 @@ for(let item of dropDownMenuItems){
     slidesToScroll: 1,
     arrows: true,
     vertical: true,
+    touchThreshold: 100,
     verticalSwipping: true,
     swipe: true,
     waitForAnimate: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings:{
+          vertical: false,
+          slidesToShow: 1,
+          arrows: false
+        }
+      }
+    ]
     
   });
 
@@ -62,6 +73,16 @@ for(let item of dropDownMenuItems){
     touchThreshold: 100,
     dots: true,
     responsive: [
+      {
+        breakpoint: 992,
+        settings:{
+          slidesToShow: 1,
+          centerMode: false,
+          centerPaddint: '40px',
+          slidesToShow: 1,
+          arrows: false
+        }
+      },
       {
         breakpoint: 768,
         settings: {
@@ -125,3 +146,4 @@ $('#headerSiglog').click(function(){
 //   selectedTd = td;
 //   selectedTd.classList.add('favor__element-item_active'); // подсветить новый td
 // }
+

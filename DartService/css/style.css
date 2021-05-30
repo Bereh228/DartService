@@ -416,6 +416,15 @@ template {
   text-transform: uppercase;
   color: #061e37;
   background-color: #fff;
+  margin-right: 27px;
+}
+
+.button__promo_video {
+  display: none;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #061e37;
+  margin-right: 27px;
 }
 
 .button__services {
@@ -704,6 +713,9 @@ template {
 .statistic__wrapper {
   display: grid;
   grid-template: minmax(150px, 1fr)/repeat(4, 400px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .statistic__item:nth-child(1) {
@@ -1061,7 +1073,6 @@ i {
 }
 
 .team .slick-current {
-  width: 350px !important;
   -webkit-filter: blur(0) !important;
           filter: blur(0) !important;
   -webkit-transition: .5s all;
@@ -1084,7 +1095,7 @@ i {
           justify-content: center;
   position: absolute;
   bottom: -15px;
-  left: 45%;
+  left: 43%;
   padding: 0;
 }
 
@@ -1103,8 +1114,8 @@ i {
 .team li[role=presentation] button {
   background: transparent;
   border: 1px solid black;
-  width: 10px;
-  height: 10px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   margin-right: 5px;
 }
@@ -1544,10 +1555,190 @@ body {
   width: 560px;
   margin: 0 auto;
 }
+
+@media (max-width: 1400px) {
+  .promo__descr,
+  .promo__video,
+  .promo__youtube {
+    width: auto;
+  }
+
+  .promo__movie,
+  .promo__youtube {
+    width: 450px;
+  }
+
+  .statistic__wrapper {
+    grid-template: minmax(150px, 1fr)/repeat(4, 300px);
+  }
+}
+
+@media (max-width: 1199px) {
+  .header {
+    margin-bottom: 70px;
+  }
+
+  .promo__header {
+    font-size: 5rem;
+  }
+
+  .promo__descr,
+  .promo__text {
+    width: 400px;
+    margin-right: 15px;
+  }
+
+  .services__wrapper {
+    grid-template: minmax(220px, 1fr)/repeat(3, 300px);
+  }
+
+  .statistic__wrapper {
+    grid-template: minmax(150px, 1fr)/repeat(4, 248px);
+  }
+
+  .statistic__text {
+    font-size: 1.85rem;
+  }
+
+  .about__header {
+    font-size: 3rem;
+  }
+
+  .about__text {
+    margin-right: 20px;
+    width: 300px;
+  }
+
+  .about__descr {
+    font-size: 1.6rem;
+  }
+
+  .about__carousel-wrapper {
+    width: 600px;
+  }
+}
+
+@media (max-width: 991px) {
+  .button__promo_video {
+    display: inline-block;
+  }
+
+  .header__menu li {
+    margin-right: 20px;
+  }
+
+  .promo__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .promo__video {
+    display: none;
+  }
+
+  .promo__descr,
+  .promo__text {
+    width: auto;
+  }
+
+  .services__wrapper {
+    grid-template: minmax(220px, 1fr)/repeat(3, 240px);
+  }
+
+  .services__title {
+    margin-bottom: 3px;
+  }
+
+  .services__descr {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .statistic__wrapper {
+    grid-template: minmax(150px, 1fr)/repeat(4, 192px);
+  }
+
+  .statistic__img {
+    margin-right: 5px;
+    width: 47px;
+    height: 45px;
+  }
+
+  .statistic__text {
+    font-size: 1.75rem;
+  }
+
+  .favor__element {
+    width: auto;
+  }
+
+  .about__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .about__header br {
+    display: none;
+  }
+
+  .about__header {
+    font-size: 3.4rem;
+  }
+
+  .about__text {
+    width: auto;
+  }
+
+  .about__descr {
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+
+  .about .button__about {
+    margin-bottom: 15px;
+  }
+
+  .team__carousel {
+    width: auto;
+  }
+
+  .team__carousel-descr {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
 @supports (-webkit-appearance:none){
 .promo{background:url("../img/main_bg.webp") center center/cover no-repeat}
 .promo__movie{background:url("../img/video_bg.webp") center center/cover no-repeat}
 .about{background:url("../img/other_bg.webp") center center/cover no-repeat}
 .about .slick-prev{background:url("../img/arrowUp.webp") center center/cover no-repeat}
 .about .slick-next{background:url("../img/arrowDown.webp") center center/cover no-repeat}
+}
+
+ @media (max-width: 1400px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1199px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 991px){
+
+@supports (-webkit-appearance:none){
+
+}
+
 }
