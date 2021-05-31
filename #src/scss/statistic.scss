@@ -2,7 +2,7 @@
     margin: 0 auto;
     &__wrapper{
         display: grid;
-        grid-template: minmax(150px, 1fr) / repeat(4, 400px);
+        grid-template: minmax(150px, 1fr) / repeat(4, 1fr);
         justify-content: center;
     }
     &__item:nth-child(1){

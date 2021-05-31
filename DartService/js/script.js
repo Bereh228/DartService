@@ -1,4 +1,46 @@
 const dropDownMenuItems = document.querySelectorAll('.favor__element-item');
+const headerExit = document.getElementById('header__exit');
+const header = document.getElementById('header');
+const hamburger = document.getElementById('hamburger');
+const hamburgerItems = document.querySelectorAll('.hamburger__item');
+
+function bodyOverflow(item){
+  if(item.classList.contains('header_active')){
+    document.body.style.overflow = 'hidden';
+  }
+  else{
+    document.body.style.overflow = 'visible';
+  }
+}
+
+function activeNoHamburger(item){
+  item.addEventListener('click',function(){
+    header.classList.toggle('header_active');
+    bodyOverflow(header);    
+  }); 
+}
+
+function checkHamburger(){
+  let windowY = window.pageYOffset;
+
+  if(windowY > 350){
+    hamburgerItems.forEach(element => {
+      element.classList.add('hamburger__item_active');
+    });
+  }else{
+    hamburgerItems.forEach(element => {
+      element.classList.remove('hamburger__item_active');
+    });
+  }
+}
+
+
+activeNoHamburger(headerExit);
+activeNoHamburger(hamburger);
+
+
+document.addEventListener('DOMContentLoaded',checkHamburger);
+window.addEventListener('scroll',checkHamburger);
 
 for(let item of dropDownMenuItems){
     item.addEventListener('click',function(){
@@ -7,42 +49,13 @@ for(let item of dropDownMenuItems){
 }
 
 
-// function checkAddClass(item){
-//     for(let value of item){
-//         value.classList.remove('favor__element-item_active');
-//     }
-
-//     for(let value of item){
-//         value.addEventListener('click',function(){
-//         value.classList.toggle('favor__element-item_active');
-//     });
-//   }
-// }
-
-//   checkAddClass(dropDownMenuItems);
-
-
-// let divWrapper = document.querySelector('.favor__element');
-// let divElement = document.querySelectorAll('.favor__element-item');
-
-// divWrapper = addEventListener('click', (event)=>{
-// let div = event.target;
-// div.classList.add('favor__element-item_active');
-// for(let item of divElement){
-//   console.log(item)
-//   if(item.classList.contains('favor__element-item_active') && item!==event.target)
-//   item.classList.remove('favor__element-item_active');
-// }
-// })
-
-
  $('.about__carousel').slick({
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
     vertical: true,
-    touchThreshold: 100,
+    touchThreshold: 20,
     verticalSwipping: true,
     swipe: true,
     waitForAnimate: false,
@@ -70,7 +83,7 @@ for(let item of dropDownMenuItems){
     centerPadding: '10px',
     slidesToShow: 3,
     arrows: false,
-    touchThreshold: 100,
+    touchThreshold: 20,
     dots: true,
     responsive: [
       {
@@ -87,9 +100,9 @@ for(let item of dropDownMenuItems){
         breakpoint: 768,
         settings: {
           arrows: false,
-          centerMode: true,
+          centerMode: false,
           centerPadding: '40px',
-          slidesToShow: 3
+          slidesToShow: 1
         }
       },
       {
@@ -126,24 +139,4 @@ $('.modal__reg-header__log').click(function(){
 $('#headerSiglog').click(function(){
     $('#modal, #modal__login').fadeIn('slow');
 });
-
-// let selectedTd;
-
-// const myElement = document.querySelector('.favor__element-item');
-
-// myElement.onclick = function(event) {
-//     let target = event.target; // где был клик?
-  
-//     if (target.tagName != 'div') return; // не на div? тогда не интересует
-  
-//     showBlock(target); // подсветить div
-//   };
-
-// function showBlock(td) {
-//   if (selectedTd) { // убрать существующую подсветку, если есть
-//     selectedTd.classList.remove('favor__element-item_active');
-//   }
-//   selectedTd = td;
-//   selectedTd.classList.add('favor__element-item_active'); // подсветить новый td
-// }
 

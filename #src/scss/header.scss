@@ -1,6 +1,11 @@
 .header{
     min-height: 45px;
     margin-bottom: 120px;
+
+    &__exit{
+        display: none;
+    }
+
     &__wrapper{
         display: flex;
         justify-content: space-between;
