@@ -211,3 +211,25 @@ $('#modal__try-exit').on('click',function(){
 });
 
 new WOW().init();
+
+
+
+$(".arrowUp").click(function(){
+  const _href = $(this).attr("href");
+  $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+  return false;
+});
+
+$('.header__link').each(function(i){
+  $(this).on('click',function(e){
+    e.preventDefault();
+
+    if(header.classList.contains('header_active')){
+      header.classList.toggle('header_active');
+      bodyOverflow(header);
+    }
+
+    const _href = $(this).attr("href");
+    $('html, body').animate({scrollTop: $(_href).offset().top+"px"});
+  })
+})
