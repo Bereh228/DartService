@@ -168,6 +168,9 @@
         width: 100%;
         z-index: 5;
         transform: translateY(-100%);
+
+        cursor: pointer;
+
         transition: .5s all;
         &_active{
             transform: translateY(0%);
@@ -180,7 +183,7 @@
             height: 100vh;
             
             padding-left: 10px;
-            background-color: rgba($color: black, $alpha: 1);
+            background-color: black;
 
         }
         &__menu{
@@ -206,6 +209,10 @@
             font-size: 11rem;
             top: 33px;
             right: 9px;
+            transition: .3s all;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
 
         .button__header{
@@ -228,17 +235,34 @@
             align-items: center;
             flex-direction: column;
             z-index: 4;
-            width: 50px;
-            height: 30px;
+            width: 60px;
+            height: 40px;
+            cursor: pointer;
+            padding: 5px;
+
+            border: 3px solid white;
+            transition: .3s all;
+            &_bMain{
+                border: 3px solid $main-color;
+            }
+            &:hover{
+                border-radius: 50%;
+                .hamburger__item{
+                    width: 70%;
+                }
+            }
             &__item{
                 background-color: $white;
                 margin-bottom: 5px;
                 width: 100%;
-                height: 5px;
+                height: 3px;
                 border-radius: 14px;
-                transition: .3s all;
+                transition: .2s all;
                 &_active{
                     background-color: $main-color;
+                }
+                &:last-child{
+                    margin-bottom: 0;
                 }
             }
         }
@@ -339,3 +363,130 @@
     }
 }
 
+@media (max-width: 575px){
+    .container{
+        width: auto;
+    }
+
+    .promo{
+        &__header{
+            font-size: 4rem;
+        }
+        .button__promo{
+            display: block;
+            margin: 0px 0px 5px;
+        }
+    }
+    .services{
+        &__item{
+            &-img{
+                &__wrapper{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 20px;
+                }
+            }
+        }
+        &__icon{
+            width: 47px;
+            height: 66px;
+            margin: 0;
+            
+        }
+    }
+    .statistic{
+        &__text{
+            font-size: 1.8rem;
+        }
+        &__img{
+            width: 34px;
+        }
+    }
+    .favor{
+        &__bottom{
+            &-img{
+                display: none;
+            }
+            &-descr{
+                margin-top: 10px;
+            }
+        }
+        &__bottom{
+            overflow: hidden;
+        }
+        &__top{
+            padding: 0;
+            margin: 15px;
+        }
+    }
+    .about{
+        &__carousel{
+            &-wrapper{
+                width: 300px;
+            }
+        }
+    }
+    .team{
+        &__carousel{
+            &-descr{
+                width: 300px;
+            }
+        }
+    }
+    .contact{
+        .form{
+            &__header,
+            &__subheader{
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 0;
+                input{
+                    margin-bottom: 5px;
+                    width: 100%;
+                }
+            }
+            &__footer{
+                .button__contact{
+                    width: 76px;
+                    font-size: 1.5rem;
+                }
+                span{
+                    font-size: 1.4rem;
+                }
+            }
+            
+        }
+    }
+    .footer{
+        &__top{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__text{
+            font-size: 2.3rem;
+        }
+        &__menu{
+            display: flex;
+            flex-direction: column;
+            a{
+                margin: 0;
+                font-size: 2.4rem;
+            }
+        }
+        &__bottom{
+            flex-direction: column;
+            &-link:after{
+                right: -15px;
+            }
+            &-text{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                a{
+                    margin-right: 25px;
+                    
+                }
+            }
+        }
+    }
+}
