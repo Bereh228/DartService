@@ -361,6 +361,12 @@
             }
         }
     }
+    .modal{
+        &__video{
+            width: 80%;
+            height: 70%;
+        }
+    }
 }
 
 @media (max-width: 575px){
@@ -487,6 +493,12 @@
                     
                 }
             }
+        }
+    }
+    .modal{
+        &__video{
+            width: 80%;
+            height: 50%;
         }
     }
 }

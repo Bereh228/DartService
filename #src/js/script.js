@@ -1,8 +1,15 @@
 const dropDownMenuItems = document.querySelectorAll('.favor__element-item');
+
 const headerExit = document.getElementById('header__exit');
 const header = document.getElementById('header');
+
 const hamburger = document.getElementById('hamburger');
 const hamburgerItems = document.querySelectorAll('.hamburger__item');
+
+const modalExitLog = document.querySelector('.modal__login-exit');
+const modalExitReg = document.querySelector('.modal__reg-exit');
+const modalExitVideo = document.querySelector('.modal__video-exit');
+const modal = document.getElementById('modal');
 
 function bodyOverflow(item){
   if(item.classList.contains('header_active')){
@@ -121,24 +128,31 @@ for(let item of dropDownMenuItems){
 
 function fadeInLogin(){
     $('#modal__login').fadeIn('slow');
+    modal.classList.toggle('modal_active');
 }
 
 function fadeInReg(){
     $('#modal__reg').fadeIn('slow');
+    modal.classList.toggle('modal_active');
 }
 
   $('.modal__login-header__reg').click(function(){
     $('#modal__login').fadeOut('fast');
     setTimeout(fadeInReg,700);
+    modal.classList.toggle('modal_active');
   });
 
 $('.modal__reg-header__log').click(function(){
     $('#modal__reg').fadeOut('fast');
     setTimeout(fadeInLogin, 700);
+    modal.classList.toggle('modal_active');
 });
 
 $('#headerSiglog').click(function(){
     $('#modal, #modal__login').fadeIn('slow');
+    modal.classList.toggle('modal_active');
+    header.classList.remove('header_active');
+    document.body.style.overflow = 'visible';
 });
 
 
@@ -155,3 +169,45 @@ $(".arrowUp").click(function(){
   $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
   return false;
 });
+
+modalExitLog.addEventListener('click',function(){
+  $('#modal, #modal__login').fadeOut();
+  modal.classList.toggle('modal_active');
+});
+
+modalExitReg.addEventListener('click',function(){
+  $('#modal, #modal__reg').fadeOut();
+  modal.classList.toggle('modal_active');
+});
+
+modalExitVideo.addEventListener('click',function(){
+  $('#modal, #modal__video').fadeOut();
+  modal.classList.toggle('modal_active');
+});
+
+$('#button__promo_video').on('click',function(){
+  $('#modal, #modal__video').fadeIn('slow');
+  modal.classList.toggle('modal_active');
+});
+
+$('#button__promo_buy').on('click',function(){
+  $('#modal, #modal__buy').fadeIn('slow');
+  modal.classList.toggle('modal_active');
+});
+
+$('#modal__buy-exit').on('click',function(){
+  $('#modal, #modal__buy').fadeOut();
+  modal.classList.toggle('modal_active');
+});
+
+$('#button__promo_try, #button__about, #button__services').on('click',function(){
+  $('#modal, #modal__try').fadeIn('slow');
+  modal.classList.toggle('modal_active');
+});
+
+$('#modal__try-exit').on('click',function(){
+  $('#modal, #modal__try').fadeOut();
+  modal.classList.toggle('modal_active');
+});
+
+new WOW().init();
