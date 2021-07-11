@@ -233,3 +233,9 @@ $('.header__link').each(function(i){
     $('html, body').animate({scrollTop: $(_href).offset().top+"px"});
   })
 })
+
+
+
+
+
+let valera;
